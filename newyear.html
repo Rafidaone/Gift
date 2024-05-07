@@ -41,7 +41,7 @@
     const queryParams = url.searchParams;
 
     // Read individual query parameters
-    const title = queryParams.get('title');
+    const name = queryParams.get('name');
     const msg = queryParams.get('msg');
 
     // Output the values
@@ -49,8 +49,8 @@
     console.log('message:', msg);
 
     // Set the input data to the HTML values
-    document.getElementById("title").innerHTML = "Happy New Year " + title + "!";
-    document.getElementById("bigTitle").innerHTML = "Happy New Year " + title + "!";
+    document.getElementById("title").innerHTML = "Happy New Year " + name + "!";
+    document.getElementById("bigTitle").innerHTML = "Happy New Year " + name + "!";
     document.getElementById("msg").innerHTML = msg;
 
 </script>
