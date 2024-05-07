@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Happy New Year!</title>
+<style>
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+
+   <h1 id="bigTitle"></h1>
+   <p id="msg"></p>
+
+</body>
+<script>
+    // Get the current URL
+    const currentUrl = window.location.href;
+
+    // Create a URL object
+    const url = new URL(currentUrl);
+
+    // Get the search parameters from the URL
+    const queryParams = url.searchParams;
+
+    // Read individual query parameters
+    const title = queryParams.get('title');
+    const msg = queryParams.get('msg');
+
+    // Output the values
+    console.log('name:', title);
+    console.log('message:', msg);
+
+    // Set the input data to the HTML values
+    document.getElementById("title").innerHTML = "Happy New Year " + title + "!";
+    document.getElementById("bigTitle").innerHTML = "Happy New Year " + title + "!";
+    document.getElementById("msg").innerHTML = msg;
+
+</script>
+
+
+</html>
