@@ -3,13 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="title">Happy birth day!</title>
+    <title id="title">Happy Birthday!</title>
 <style>
 
 
+body {
+
+  background-image: url('https://rafidaone.github.io/Gift/ballons.gif');
+
+  background-repeat:no-repeat;background-size:cover;background-position:center;position:fixed;top:0;left:0;width:100%;height:100%;opacity:1.8;z-index:-6;
+
+background-color: teal;
+
+  
+    
+}
 
 
+p{
+  color: whitesmoke;
+}
+h1{
+  color: whitesmoke;
 
+
+  
+} img{
+float: right;
+size: 40%;
+
+}
 
 
 
@@ -23,11 +46,12 @@
 
 
 <body>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  
 
 
    <h1 id="bigTitle"></h1>
    <p id="msg"></p>
+   <img  src="https://rafidaone.github.io/Gift/firework.gif" alt="fireworks">
 
 </body>
 <script>
@@ -41,7 +65,7 @@
     const queryParams = url.searchParams;
 
     // Read individual query parameters
-    const title = queryParams.get('title');
+    const name = queryParams.get('name');
     const msg = queryParams.get('msg');
 
     // Output the values
@@ -49,8 +73,8 @@
     console.log('message:', msg);
 
     // Set the input data to the HTML values
-    document.getElementById("title").innerHTML = "Happy Birth day " + title + "!";
-    document.getElementById("bigTitle").innerHTML = "Happy Birth day " + title + "!";
+    document.getElementById("title").innerHTML = "Happy Birthday " + name + "!";
+    document.getElementById("bigTitle").innerHTML = "Happy Birthday " + name + "!";
     document.getElementById("msg").innerHTML = msg;
 
 </script>
