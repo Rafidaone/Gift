@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Happy Thanksgiving!</title>
+<style>
+
+
+body {
+
+  
+  
+    
+}
+
+
+p{
+  color: black;
+background-color: rgba(255, 255, 255, 0.61);
+}
+h1{
+    
+  color: black;
+  background-color: rgba(255, 255, 255, 0.61);
+
+} img{
+float: right;
+width: 50%;
+
+}
+
+#text{
+    background-image: url('turkey.jpeg');
+    background-size: cover; /* Optional: Adjusts the size of the background image */
+
+background-repeat:no-repeat;background-size:cover;background-position:center;position:fixed;top:0;left:0;width:100%;height:100%;opacity:1.8;z-index:-6;
+
+background-color: grey;
+border: 10px rgb(255, 119, 0);  
+
+  border-style: dotted;
+
+
+}
+
+
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+  
+
+<div id="text">
+   <h1 id="bigTitle"></h1>
+   <p id="msg"></p>
+</div>
+</body>
+<script>
+    // Get the current URL
+    const currentUrl = window.location.href;
+
+    // Create a URL object
+    const url = new URL(currentUrl);
+
+    // Get the search parameters from the URL
+    const queryParams = url.searchParams;
+
+    // Read individual query parameters
+    const name = queryParams.get('name');
+    const msg = queryParams.get('msg');
+
+    // Output the values
+    console.log('name:', title);
+    console.log('message:', msg);
+
+    // Set the input data to the HTML values
+    document.getElementById("title").innerHTML = "Happy Thanksgiving " + name + "!";
+    document.getElementById("bigTitle").innerHTML = "Happy Thanksgiving " + name + "!";
+    document.getElementById("msg").innerHTML = msg;
+
+</script>
+
+
+</html>
