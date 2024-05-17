@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">congratulations!</title>
+<style>
+
+
+/* ------ fonts --------- */
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+
+@font-face {
+    font-family: fancy;
+    src: url(https://rafidaone.github.io/Gift/fancy.ttf);
+  }
+
+
+  .kalam-light {
+  font-family: "Kalam", cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+
+  background-size:4in;
+background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url("https://rafidaone.github.io/Gift/book.jpeg");
+  background-repeat: repeat;
+  image-rendering: optimizeSpeed;
+  
+
+background-color: rgb(44, 49, 69);
+
+  
+    
+}
+
+
+p{
+  color: whitesmoke;
+margin-left: 5%;
+font-size: .7cm;
+
+
+}
+h1{
+  margin-left: 4%;
+margin-top: 2%; 
+  color: whitesmoke;
+
+
+  
+
+  
+} img{
+  position: absolute;
+float: right;
+width: 20%;
+top: -40px;
+right: 10px;
+
+
+filter: drop-shadow(0px 10px 15px rgba(255, 255, 255, 0.702));
+
+
+
+}
+    #text{
+
+    
+  
+
+
+}
+
+
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+  
+
+<div id="text">
+   <h1 class=".kalam-light" id="bigTitle"></h1>
+   <p class=".kalam-light" id="msg"></p>
+   <img  src="https://rafidaone.github.io/Gift/hat.png" alt="hat">
+</div>
+</body>
+<script>
+    // Get the current URL
+    const currentUrl = window.location.href;
+
+    // Create a URL object
+    const url = new URL(currentUrl);
+
+    // Get paramaters from the URL
+    const queryParams = url.searchParams;
+
+    // Read  query 
+    const name = queryParams.get('name');
+    const msg = queryParams.get('msg');
+    const school = queryParams.get('school');
+
+
+    console.log('name:', title);
+    console.log('message:', msg);
+    console.log('school:', school);
+
+
+    // converting long dinguses into what they need to be
+    document.getElementById("title").innerHTML = "congratulations " + name + "! for graduating " + school;
+    document.getElementById("bigTitle").innerHTML = "congratulations " + name + "! for graduating " + school;
+    document.getElementById("msg").innerHTML = msg;
+
+</script>
+
+
+</html>
