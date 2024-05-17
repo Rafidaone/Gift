@@ -1,33 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="title">Happy New Year!</title>
+    <title id="title">Happy Birthday !</title>
 <style>
 
 
-/* ------ fonts --------- */
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
-
-
-@font-face {
-    font-family: fancy;
-    src: url(https://rafidaone.github.io/Gift/fancy.ttf);
-  }
-
-
-  .kalam-light {
-  font-family: "Kalam", cursive;
-  font-weight: 300;
-  font-style: normal;
-}
-
 body {
 
-
-
-background-color: rgb(44, 49, 69);
+  
 
   
     
@@ -35,33 +15,25 @@ background-color: rgb(44, 49, 69);
 
 
 p{
-  color: whitesmoke;
-margin-left: 5%;
-font-size: .7cm;
+  color: black;
+
 }
 h1{
-  margin-left: 4%;
-margin-top: 2%;
-  color: whitesmoke;
-
-
-  
-
+    
+  color: black;
   
 } img{
 float: right;
-size: 40%;
-
+width: 50%;
 }
-    #text{
-    background-image: url('https://rafidaone.github.io/Gift/sky.avif');
+
+#text{
+    background-image: url('https://rafidaone.github.io/Gift/cake.webp');
     background-size: cover; /* Optional: Adjusts the size of the background image */
 
 background-repeat:no-repeat;background-size:cover;background-position:center;position:fixed;top:0;left:0;width:100%;height:100%;opacity:1.8;z-index:-6;
 
-  border: 10px rgb(1, 197, 7);  
-
-  border-style: dotted;
+background-color: grey;
 
 
 }
@@ -81,11 +53,11 @@ background-repeat:no-repeat;background-size:cover;background-position:center;pos
   
 
 <div id="text">
-   <h1 class=".kalam-light" id="bigTitle"></h1>
-   <p class=".kalam-light" id="msg"></p>
-   <img  src="https://rafidaone.github.io/Gift/firework.gif" alt="fireworks">
+   <h1 id="bigTitle">Happy Birthday !</h1>
+   <p id="msg"></p>
+   <img src="https://rafidaone.github.io/Gift/ballons.gif" alt="ballons">
 </div>
-</body>
+
 <script>
     // Get the current URL
     const currentUrl = window.location.href;
@@ -93,23 +65,24 @@ background-repeat:no-repeat;background-size:cover;background-position:center;pos
     // Create a URL object
     const url = new URL(currentUrl);
 
-    // Get paramaters from the URL
+    // Get the search parameters from the URL
     const queryParams = url.searchParams;
 
-    // Read  query 
+    // Read individual query parameters
     const name = queryParams.get('name');
     const msg = queryParams.get('msg');
 
-
+    // Output the values
     console.log('name:', title);
     console.log('message:', msg);
 
     // Set the input data to the HTML values
-    document.getElementById("title").innerHTML = "Happy New Year " + name + "!";
-    document.getElementById("bigTitle").innerHTML = "Happy New Year " + name + "!";
+    document.getElementById("title").innerHTML = "Happy Birthday " + name + "!";
+    document.getElementById("bigTitle").innerHTML = "Happy Birthday " + name + "!";
     document.getElementById("msg").innerHTML = msg;
 
 </script>
 
 
-</html>
+
+</body></html>
